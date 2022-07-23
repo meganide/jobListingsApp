@@ -110,6 +110,10 @@
   font-size: 20px;
 }
 
+.icon:hover {
+  color: black;
+}
+
 .shorts {
   color: hsl(180, 8%, 52%);
 }
