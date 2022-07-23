@@ -4,13 +4,12 @@ import "./jobcard.css";
 
 function Jobcard({ jobs }, props) {
   function clickFilterItem(event) {
-    console.log("i am clicked");
+    console.log(event.currentTarget.value);
   }
 
   return (
     <>
       {jobs.map((job) => {
-        const randomNumber = Math.random() * (100000 - 20) + 20;
         let itemsArray = [job.role];
         itemsArray.push(job.level);
         itemsArray = itemsArray.concat(job.tools);
@@ -19,7 +18,6 @@ function Jobcard({ jobs }, props) {
         itemsArray = itemsArray.filter((item) => {
           return typeof item === "string";
         });
-
 
         return (
           <Card
@@ -45,9 +43,10 @@ function Jobcard({ jobs }, props) {
                 </div>
               </div>
               <div className="icontexts">
-              {itemsArray.map((item) => {
-                return (
+                {itemsArray.map((item) => {
+                  const randomNumber = Math.random() * (100000 - 20) + 20;
 
+                  return (
                     <p
                       key={randomNumber}
                       className="icon"
@@ -55,9 +54,8 @@ function Jobcard({ jobs }, props) {
                     >
                       {item}
                     </p>
-
-                );
-              })}
+                  );
+                })}
               </div>
             </CardContent>
           </Card>
