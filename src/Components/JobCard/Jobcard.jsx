@@ -4,6 +4,11 @@ import "./jobcard.css";
 
 function Jobcard({jobs}, props) {
 
+  function clickFilterItem(event) {
+    console.log("i am clicked");
+  }
+
+
   return (
     <>
     {jobs.map((job) => {
@@ -37,6 +42,7 @@ function Jobcard({jobs}, props) {
                 <p
                   key={randomNumber}
                   className="icon"
+                  onClick={clickFilterItem}
                 >
                   {item}
                 </p>
