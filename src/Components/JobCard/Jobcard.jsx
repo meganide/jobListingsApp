@@ -44,9 +44,10 @@ function Jobcard({ jobs }, props) {
                   </p>
                 </div>
               </div>
+              <div className="icontexts">
               {itemsArray.map((item) => {
                 return (
-                  <div className="icontexts">
+
                     <p
                       key={randomNumber}
                       className="icon"
@@ -54,9 +55,10 @@ function Jobcard({ jobs }, props) {
                     >
                       {item}
                     </p>
-                  </div>
+
                 );
               })}
+              </div>
             </CardContent>
           </Card>
         );
