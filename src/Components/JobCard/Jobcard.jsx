@@ -3,8 +3,10 @@ import React from "react";
 import "./jobcard.css";
 
 function Jobcard({ jobs }, props) {
+
   function clickFilterItem(event) {
-    console.log(event.currentTarget.value);
+    event.currentTarget.classList.toggle('activeBackground');
+    const whichClicked = event.target.innerText;
   }
 
   return (
